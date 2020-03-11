@@ -2,7 +2,10 @@
 Web Programming with Python and JavaScript
 
 Important Notes:
+
 - Please test my website using Google Chrome.
+
+- I asked my fiend to download all the lectures (videos) at same time through his account because the internet is not stable in my country and he copied all of them to my external HHD , The problem was the order of the file lectures were wrong which made Lec02(Flask) became lec01 in my HDD and Lec01(GIT-HTML) became lec02 in my HDD So I am miss-leaded and I made the project0 based on Lec00 only before I discovered the problem and that made me did self-study to complete your requirements in project0.
 
 
 
