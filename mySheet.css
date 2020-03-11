@@ -1,4 +1,50 @@
 
+/*-- CSS selectors --*/
+.countryCode::before {
+     content: "+967 - ";
+ }
+.selectHDesc::selection {
+    color: green;
+    background-color: white;
+}
+/*-- SCSS inheritance  --*/
+.resumeTitle, .aboutTitle, .aboutSubTitle {
+  font-family:Times;
+  color: green;
+  font-weight: bold;
+}
+.aboutTitle {
+    font-size: 50px;
+}
+.resumeTitle {
+    font-size: 49px;
+}
+.aboutSubTitle {
+    font-size: 30px;
+    color: black;
+}
+/*--- navigation bar  ---*/
+.navbar {
+  background:#6ab446;
+}
+.nav-link,
+.navbar-brand {
+  color: #fff;
+  cursor: pointer;
+}
+/*-- ! importantoverriding the styles --*/
+.nav-link {
+  margin-right: 1em !important;
+}
+.nav-link:hover {
+  color: #000;
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+/*--- Header  ---*/
+/*-- to add stretchable image for header background  --*/
 .header {
   background-image: url('images/header-background.jpg');
   background-size: cover;
@@ -9,24 +55,6 @@ body {
   padding: 0;
   margin: 0;
   background: #f2f6e9;
-}
-/*--- navigation bar   background:#6ab446; ---*/
-.navbar {
-  background:#6ab446;
-}
-.nav-link,
-.navbar-brand {
-  color: #fff;
-  cursor: pointer;
-}
-.nav-link {
-  margin-right: 1em !important;
-}
-.nav-link:hover {
-  color: #000;
-}
-.navbar-collapse {
-  justify-content: flex-end;
 }
 .overlay {
   position: absolute;
@@ -101,6 +129,7 @@ body {
   background-color: #333;
   border: 1px solid #333;
 }
+/*--- Footer ---*/
 .page-footer {
   background-color: #222;
   color: #ccc;

@@ -1,0 +1,167 @@
+/*-- CSS selectors --*/
+.countryCode::before {
+     content: "+967 - ";
+ }
+.selectHDesc::selection {
+    color: green;
+    background-color: white;
+}
+/*-- SCSS inheritance  --*/
+%titlex{
+  font-family:Times;
+  color: green;
+  font-weight: bold;
+}
+.aboutTitle {
+    @extend %titlex;
+    font-size: 50px;
+}
+.resumeTitle {
+    @extend %titlex;
+    font-size: 49px;
+}
+.aboutSubTitle {
+  @extend %titlex;
+    font-size: 30px;
+    color: black;
+}
+/*-- SCSS Variables to control colors --*/
+$colorL01: #6ab446;
+$colorL02: #fff;
+$colorHover: #000;
+
+
+/*--- navigation bar  ---*/
+.navbar {
+	background: $colorL01;
+}
+/*-- SCSS Nested  --*/
+/*-- ! important overriding the styles --*/
+.nav-link {
+	color: $colorL02;
+	cursor: pointer;
+	margin-right: 1em !important;
+	&:hover {
+		color: $colorHover;
+	}
+}
+.navbar-brand {
+	color: $colorL02;
+	cursor: pointer;
+}
+.navbar-collapse {
+	justify-content: flex-end;
+}
+/*--- Header  ---*/
+/*-- to add stretchable image for header background  --*/
+.header {
+	background-image: url('images/header-background.jpg');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+body {
+	padding: 0;
+	margin: 0;
+	background: #f2f6e9;
+}
+.overlay {
+	position: absolute;
+	min-height: 100%;
+	min-width: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.6);
+}
+/*-- SCSS Nested  --*/
+.description {
+	left: 71%;
+	position: absolute;
+	top: 45%;
+	transform: translate(-50%, -55%);
+	text-align: left;
+	h1 {
+		color: $colorL01;
+	}
+	p {
+		color: $colorL02;
+		font-size: 1.2rem;
+		line-height: 1.5;
+	}
+  /*-- SCSS Nested  --*/
+	button {
+		border: 1px solid $colorL01;
+		background: $colorL01;
+		border-radius: 0;
+		color: $colorL02;
+		&:hover {
+			border: 1px solid $colorL02;
+			background: $colorL02;
+			color: $colorHover;
+		}
+	}
+}
+/*-- SCSS Nested  --*/
+.features {
+	margin: 4em auto;
+	padding: 1em;
+	position: relative;
+	img {
+		-webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+		-moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+		margin-bottom: 16px;
+	}
+	.form-control {
+		border-radius: 0;
+	}
+	input {
+		border-radius: 0;
+	}
+	.btn {
+		background-color: #589b37;
+		border: 1px solid #589b37;
+		color: $colorL02;
+		margin-top: 20px;
+		&:hover {
+			background-color: #333;
+			border: 1px solid #333;
+		}
+	}
+}
+.feature-title {
+	color: #333;
+	font-size: 1.3rem;
+	font-weight: 700;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+.feature-cv {
+	color: #ffffff;
+	font-size: 1.2rem;
+	line-height: 1.5;
+}
+/*--- Footer ---*/
+.page-footer {
+	background-color: #222;
+	color: #ccc;
+	padding: 60px 0 30px;
+}
+.footer-copyright {
+	color: #666;
+	padding: 40px 0;
+}
+/*-- use media query to make the header content suitable for narrow width  --*/
+@media (max-width: 575.98px) {
+	.description {
+		left: 0;
+		padding: 0 15px;
+		position: absolute;
+		top: 10%;
+		transform: none;
+		text-align: center;
+	}
+	.features {
+		margin: 0;
+	}
+}
